@@ -251,11 +251,20 @@ svg {
       position: absolute;
       top: 0;
       width: 100%;
-      background-color: rgba(0, 0, 0, .4)
+      background-color: transparent;
+}
+
+.lg-toolbar.lg-group:not(.lg-dropdown-active):hover {
+      background-color: rgba(0, 0, 0, 0.4)
+}
+
+.lg-dropdown-active .lg-toolbar.lg-group:hover {
+      background-color: rgba(0, 0, 0, 0.7)
 }
 
 .lg-toolbar .lg-icon {
       color: #fff;
+      text-shadow: 2px 2px 4px #0006;
       cursor: pointer;
       float: right;
       font-size: 24px;
@@ -268,16 +277,23 @@ svg {
       outline: medium none;
       -webkit-transition: color .2s linear;
       -o-transition: color .2s linear;
-      transition: color .2s linear
+      transition: color .2s linear;
+      -moz-transition: color .2s linear;
+      -ms-transition: color .2s linear;
 }
 
-.lg-toolbar .lg-icon:hover {
+.lg-toolbar.lg-group:hover > .lg-icon {
+color: #fff;
+}
+
+.lg-toolbar.lg-group > .lg-icon:hover,
+.lg-toolbar .lg-pdf:hover {
       color: #f57b56
 }
 
 .lg-toolbar .lg-close:after {
       content: "\e070";
-      display: none;
+      display: none
 }
 
 .lg-toolbar .lg-download:after,
@@ -311,13 +327,20 @@ svg {
 
 #lg-counter {
       color: #fff;
+      text-shadow: 2px 2px 4px #555;
       display: inline-block;
       font-size: 16px;
       padding: 12px 20px 0 20px;
       vertical-align: middle;
       position: relative;
-      left: 40px;
+      left: 50px;
       font-family: sans-serif !important
+}
+
+
+.lg-toolbar:hover  > #lg-counter {
+      color: #fff!important;
+
 }
 
 #lg-link-home {
@@ -573,7 +596,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .lg-image {
       filter: drop-shadow(1px 1px 10px #aeaeae);
-      padding: 47px
+      padding: 110px
 }
 
 .lg-outer .lg-video .lg-object {
@@ -1142,14 +1165,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
       top: -2px
 }
 
-/* hamberger menu icon */
 .lg-outer:not(.lg-dropdown-active) #lg-share:after {
       content: "\2630"
 }
 
-/* Close menu icon */
 .lg-outer.lg-dropdown-active #lg-share:after {
-      content: "\e070";
+      content: "\e070"
 }
 
 .lg-group:after {
