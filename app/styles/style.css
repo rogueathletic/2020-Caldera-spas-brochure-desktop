@@ -570,7 +570,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .lg-dropdown-text {
       font-family: magdelin, prelobook, Arial, "Helvetica Neue", Helvetica, sans-serif !important;
-      font-weight: 400
+      font-weight: 400;
+      text-shadow: none;
 }
 
 .lg-outer .lg-toogle-thumb:hover {
@@ -685,10 +686,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
       width: 100%;
       z-index: 1083;
       opacity: 0;
-      -webkit-transition: opacity 80ms ease 0s;
-      -moz-transition: opacity 80ms ease 0s;
-      -o-transition: opacity 80ms ease 0s;
-      transition: opacity 80ms ease 0s
+      -webkit-transition: opacity 80ms linear;
+      -moz-transition: opacity 80ms linear;
+      -o-transition: opacity 80ms linear;
+      transition: opacity 80ms linear;
+      -ms-transition: opacity 80ms linear;
 }
 
 .lg-progress-bar .lg-progress {
